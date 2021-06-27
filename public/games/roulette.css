@@ -1,0 +1,27 @@
+*{
+    font-family: Montserrat;
+}
+.wrapper{
+    height: 60px;
+    width: 96%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.stick{
+    border-left: 1px solid black;
+}
+.info{
+    margin-top: 50px;
+}
+.bet{
+    border-radius: 10px;
+    background-color: #383b40;
+    color: #f5a883;
+    height: 3em;
+    display: inline-block;
+    padding: 1.5em 0.5em 0 0.5em;
+    font-weight: bold;
+}
+.winner{
+    display: none;
+}

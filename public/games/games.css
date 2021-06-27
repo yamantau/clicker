@@ -1,0 +1,15 @@
+.gamesMenu{
+    font-family: Montserrat;
+}
+.gamesMenu > *{
+    width: 96%;
+    height: 3.5em;
+    font-weight: bold;
+    background: linear-gradient( rgba(55, 51, 51, 0.9), rgba(55, 51, 51, 0.9)), url("ыва.jpg") ;
+    margin: 0 auto 15px auto;
+    border-radius: 35px;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 2em;
+    color: white;
+}

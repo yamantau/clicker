@@ -1,0 +1,89 @@
+body {
+    margin: 0 auto;
+    font-size: calc(0.75em + 10%);
+    font-family: 'Montserrat';
+}
+.borderLogo{
+    border-left: 1px solid black;
+}
+.logo {
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8%;
+    font-weight: bold;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    font-size: 1.1em;
+}
+.buttons > *{
+    margin: -3% 0 8% 0;
+}
+.authLogo{
+    color: rgb(122, 217, 183);
+}
+.buttonLog{
+    margin: 1% auto 10% auto;
+    font-weight: bold;
+    padding: 3%;
+    width: 90%;
+    display: block;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(122, 217, 183);
+    outline: none;
+}
+.buttonReg{
+    margin: 5% auto 10% auto;
+    font-weight: bold;
+    padding: 3%;
+    width: 90%;
+    display: block;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(122, 217, 183);
+    outline: none;
+}
+.login{
+
+}
+.reg{
+    display: none;
+}
+.forms {
+    width: 94%;
+    height: 50%;
+    border-radius: 10px;
+    margin: 3% auto 0 auto;
+    box-shadow: 0 7px 15px 7px rgba(0,0,0, 0.1);
+}
+form {
+    font-size: 0.8em;
+}
+label{
+    margin: 0 0 0 8%;
+}
+.input-forms{
+    border-radius: 10px;
+    display: block;
+    width: 84%;
+    border: none;
+    padding: 3%;
+    outline: none;
+    background-color: rgba(0,0,0, 0.1);
+    margin: 2% auto -2% auto;
+}
+.input-forms:focus::placeholder{
+
+    opacity: 0;
+    transition: opacity 400ms;
+}
+.footer{
+    text-align: center;
+    padding: 5%;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <div class="forms">
+
+        <div class="logo">livechat</div>
+        <div class="buttons">
+            <div class="authLogo">АВТОРИЗАЦИЯ</div>
+            <div class="borderLogo"></div>
+            <div class="regLogo">РЕГИСТРАЦИЯ</div>
+        </div>
+
+        <form class="login" method="post" action="/login">
+
+            <label class="labelName">ИМЯ</label> <br>
+            <input type="text" placeholder="username" name="usernameLogin" class="input-forms" id="name"><br><br>
+            <label class="labelPassword">ПАРОЛЬ</label><br>
+            <input type="text" placeholder="password" name="passwordLogin" class="input-forms" id="password"><br><br>
+            <label></label><br>
+            <input type="submit" value="Авторизоваться" formaction='/login' class="buttonLog">
+
+        </form>
+
+        <form class="reg" method="post" action="/reg">
+
+            <label class="labelName">ИМЯ</label> <br>
+            <input type="text" placeholder="username" name="usernameReg" class="input-forms"><br><br>
+            <label class="labelPassword">ПАРОЛЬ</label><br>
+            <input type="text" placeholder="password" name="passwordReg" class="input-forms"><br><br>
+            <label>ПОВТОР ПАРОЛЯ</label><br>
+            <input  type="text" placeholder="password" name="rePasswordReg" class="input-forms"><br><br>
+            <input type="submit" value="Зарегистрироваться"  formaction="/reg"  class="buttonReg">
+
+        </form>
+        <div class="footer">by yamantau_</div>
+    </div>
+<script src="login.js"></script>
+</body>
+</html>

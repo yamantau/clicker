@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="time"></div>
+    </body>
+    <style>
+        .time{
+            font-size: 10em;
+        }
+    </style>
+<script>
+    let socket = io();
+
+    let timeToRoleClient = 15000;
+    let statusClient = 'time';
+    let betTimeClient = 7000
+
+    $(window).on('focus', ()=>{
+        socket.emit('getTime');
+    })
+    socket.on('postTime', (statusRole, allTime, betTime)=>{
+        statusClient = statusRole;
+        timeToRoleClient = allTime;
+        betTimeClient = betTime;
+    })
+
+
+    function role(){
+
+        timeToRoleClient = 15000;
+        betTimeClient = 7000
+
+        let id2 = setInterval(()=>{
+            if(timeToRoleClient > 0){
+                timeToRoleClient -= 100;
+                $('.time').text(timeToRoleClient/1000)
+            } else {
+                clearInterval(id2)
+                $('.time').text('rolling')
+                let id3 = setInterval(()=>{
+                    if(betTimeClient > 0){
+                        betTimeClient -= 100
+                    } else {
+                        clearInterval(id3);
+                        betTimeClient = 7000
+                        console.log('Выпало число1')
+                        role()
+                    }
+                }, 100)
+            }
+        }, 100)
+
+    }
+
+
+    socket.emit('getTime');
+    role()
+</script>
+</html>
